@@ -28,7 +28,7 @@ public class ServerThread extends Thread{
     public void run(){
         comunica();
     }
-
+    //
     public void comunica() {
         try {
             BufferedReader inDalClient = new BufferedReader(new InputStreamReader(client.getInputStream()));

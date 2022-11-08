@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Server{
     ArrayList<Biglietto> biglietti = new ArrayList<Biglietto>();
     ArrayList<Socket> socket = new ArrayList<Socket>();
+    
     // metodo per semplificare l'inserimento
     public void aggiunta(){
     Biglietto b1 = new Biglietto(1, "tribuna");
@@ -29,11 +30,11 @@ public class Server{
     biglietti.add(b7);
     biglietti.add(b8);
     }
-
-    public void connetti() throws IOException {
+    // Attivazione e Blocco in accept del Server
+    public void connetti() throws IOException { 
         System.out.println("Server in esecuzione ");
         ServerSocket server = new ServerSocket(6942);
-        aggiunta();
+        this.aggiunta();
         ObjectMapper objectMapper = new ObjectMapper();
 
 
